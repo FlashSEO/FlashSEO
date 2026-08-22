@@ -512,6 +512,7 @@ section{ position: relative; }
   width: 260px; height: 260px;
   background: radial-gradient(circle, rgba(255,92,0,.28), transparent 70%);
   top: -80px; right: -80px;
+  pointer-events: none;
 }
 
 /* ---------- CTA banner ---------- */
@@ -531,6 +532,7 @@ section{ position: relative; }
   content:"";
   position:absolute;
   inset:0;
+  pointer-events: none;
   background:
     radial-gradient(circle at 85% 20%, rgba(255,92,0,.22), transparent 55%);
 }
