@@ -312,8 +312,8 @@ section{ position: relative; }
 /* Signature bolt-chain graphic */
 .bolt-scene{
   position: relative;
-  aspect-ratio: 1/1;
-  max-width: 460px;
+  aspect-ratio: 380/520;
+  max-width: 520px;
   margin-left: auto;
 }
 .bolt-scene svg{ width:100%; height:100%; overflow: visible; }
@@ -335,6 +335,21 @@ section{ position: relative; }
   fill: var(--navy-mid);
   stroke: var(--navy-line);
   stroke-width: 2;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: pop-node .5s var(--ease) forwards;
+}
+.bolt-node-final-ring{
+  animation: pulse-ring 2.4s var(--ease) infinite;
+  animation-delay: 2.6s;
+}
+@keyframes pulse-ring{
+  0%{ opacity:0; transform: scale(.85); }
+  35%{ opacity:.6; }
+  100%{ opacity:0; transform: scale(1.35); }
+}
+.bolt-icon{
   opacity: 0;
   transform-box: fill-box;
   transform-origin: center;
@@ -865,7 +880,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 /* ---------- Responsive ---------- */
 @media (max-width: 980px){
   .hero-grid{ grid-template-columns: 1fr; }
-  .bolt-scene{ margin: 40px auto 0; max-width: 320px; }
+  .bolt-scene{ margin: 40px auto 0; max-width: 360px; }
   .process-grid{ grid-template-columns: 1fr 1fr; }
   .card-grid{ grid-template-columns: 1fr 1fr; }
   .split{ grid-template-columns: 1fr; }
