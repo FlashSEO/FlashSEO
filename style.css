@@ -336,6 +336,8 @@ section{ position: relative; }
   stroke: var(--navy-line);
   stroke-width: 2;
   opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
   animation: pop-node .5s var(--ease) forwards;
 }
 .bolt-node-label{
@@ -346,6 +348,8 @@ section{ position: relative; }
   text-transform: uppercase;
   letter-spacing: 1px;
   opacity:0;
+  transform-box: fill-box;
+  transform-origin: center;
   animation: pop-node .5s var(--ease) forwards;
 }
 @keyframes pop-node{
