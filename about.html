@@ -12,44 +12,36 @@
 <link rel="stylesheet" href="style.css">
 <style>
   /* ===== Team section ===== */
-  .team-stats { display:flex; flex-wrap:wrap; gap:12px 32px; margin-top:22px; }
+  .team-stats { display:flex; flex-wrap:wrap; gap:12px 40px; margin-top:26px; }
   .team-stats div { display:flex; align-items:baseline; gap:10px; }
-  .team-stats strong { font-family:'Anton', sans-serif; font-size:2.4rem; font-weight:400; line-height:1; }
+  .team-stats strong { font-family:'Anton', sans-serif; font-size:2.6rem; font-weight:400; line-height:1; }
   .team-stats span { opacity:.7; font-size:.95rem; }
 
-  .team-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; margin-top:40px; }
-  .team-card {
-    display:flex; align-items:center; gap:16px;
-    padding:20px; border-radius:14px;
-    border:1px solid rgba(255,255,255,.1);
-    background:rgba(255,255,255,.03);
-  }
-  .team-avatar {
-    flex:0 0 56px; width:56px; height:56px; border-radius:50%;
+  .team-people { display:flex; flex-wrap:wrap; gap:14px; margin-top:34px; }
+  .team-dot {
+    width:60px; height:60px; border-radius:50%;
     display:grid; place-items:center;
-    font-family:'Anton', sans-serif; letter-spacing:.04em; font-size:1.15rem;
-    background:rgba(255,255,255,.08);
+    font-family:'Anton', sans-serif; letter-spacing:.04em; font-size:1.05rem;
+    background:rgba(255,255,255,.07);
     border:1px solid rgba(255,255,255,.14);
   }
-  .team-card h4 { margin:0 0 2px; font-size:1.02rem; }
-  .team-card p { margin:0; opacity:.68; font-size:.9rem; line-height:1.4; }
-
-  /* CEO card sits on top, full width */
-  .team-card.is-ceo {
-    grid-column:1 / -1; padding:28px;
-    border-color:var(--accent, #ff5a1f);
-    background:rgba(255,255,255,.05);
-  }
-  .team-card.is-ceo .team-avatar {
-    flex-basis:76px; width:76px; height:76px; font-size:1.5rem;
-    background:var(--accent, #ff5a1f); color:#fff; border:0;
-  }
-  .team-card.is-ceo h4 { font-size:1.25rem; }
-  .team-card.is-ceo p { font-size:.98rem; }
-
-  @media (max-width:900px) { .team-grid { grid-template-columns:repeat(2, 1fr); } }
-  @media (max-width:560px) { .team-grid { grid-template-columns:1fr; } }
+  .team-dot.is-ceo { background:var(--accent, #ff5a1f); border-color:transparent; color:#fff; }
+  @media (max-width:560px) { .team-dot { width:48px; height:48px; font-size:.9rem; } }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "FlashSEO Rank",
+  "description": "Manual backlink building agency with a team of 10 people.",
+  "founder": { "@type": "Person", "name": "Muhammad Ismail", "jobTitle": "Founder & CEO" },
+  "numberOfEmployees": { "@type": "QuantitativeValue", "value": 10 },
+  "sameAs": [
+    "https://www.linkedin.com/company/flashseoo",
+    "https://t.me/FlashSEORank"
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -111,70 +103,32 @@
     </div>
   </section>
 
-  <!-- ================= TEAM SECTION (NEW) ================= -->
+  <!-- ================= TEAM SECTION ================= -->
   <section class="section" id="team">
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow">Our team</span>
-        <h2>10 people. Every link placed by hand.</h2>
-        <p>One founder and nine specialists work on your campaign. No outsourcing to bots, no anonymous freelancers.</p>
+        <h2>A team of 10 people behind every campaign.</h2>
+        <p>FlashSEO Rank is run by 10 people: our founder and CEO, Muhammad Ismail, and a team of 9 link builders who place every backlink by hand.</p>
       </div>
 
       <div class="team-stats reveal">
-        <div><strong>10</strong><span>team members</span></div>
+        <div><strong>10</strong><span>people on the team</span></div>
         <div><strong>1</strong><span>founder & CEO</span></div>
-        <div><strong>9</strong><span>link building specialists</span></div>
+        <div><strong>9</strong><span>link builders</span></div>
       </div>
 
-      <div class="team-grid">
-
-        <!-- CEO -->
-        <div class="team-card is-ceo reveal">
-          <div class="team-avatar">MI</div>
-          <div>
-            <h4>Muhammad Ismail</h4>
-            <p>Founder & CEO — plans strategy and personally oversees every campaign.</p>
-          </div>
-        </div>
-
-        <!-- 9 team members: apni team ke asli naam aur roles yahan replace karein -->
-        <div class="team-card reveal">
-          <div class="team-avatar">TM</div>
-          <div><h4>Team Member 1</h4><p>Outreach Specialist</p></div>
-        </div>
-        <div class="team-card reveal">
-          <div class="team-avatar">TM</div>
-          <div><h4>Team Member 2</h4><p>Outreach Specialist</p></div>
-        </div>
-        <div class="team-card reveal">
-          <div class="team-avatar">TM</div>
-          <div><h4>Team Member 3</h4><p>Guest Post Manager</p></div>
-        </div>
-        <div class="team-card reveal">
-          <div class="team-avatar">TM</div>
-          <div><h4>Team Member 4</h4><p>Guest Post Manager</p></div>
-        </div>
-        <div class="team-card reveal">
-          <div class="team-avatar">TM</div>
-          <div><h4>Team Member 5</h4><p>Content Writer</p></div>
-        </div>
-        <div class="team-card reveal">
-          <div class="team-avatar">TM</div>
-          <div><h4>Team Member 6</h4><p>Content Writer</p></div>
-        </div>
-        <div class="team-card reveal">
-          <div class="team-avatar">TM</div>
-          <div><h4>Team Member 7</h4><p>SEO Analyst</p></div>
-        </div>
-        <div class="team-card reveal">
-          <div class="team-avatar">TM</div>
-          <div><h4>Team Member 8</h4><p>Quality Checker</p></div>
-        </div>
-        <div class="team-card reveal">
-          <div class="team-avatar">TM</div>
-          <div><h4>Team Member 9</h4><p>Client Support</p></div>
-        </div>
-
+      <div class="team-people reveal" role="img" aria-label="The FlashSEO Rank team: 10 people, including founder and CEO Muhammad Ismail">
+        <div class="team-dot is-ceo" title="Muhammad Ismail, Founder &amp; CEO">MI</div>
+        <div class="team-dot"></div>
+        <div class="team-dot"></div>
+        <div class="team-dot"></div>
+        <div class="team-dot"></div>
+        <div class="team-dot"></div>
+        <div class="team-dot"></div>
+        <div class="team-dot"></div>
+        <div class="team-dot"></div>
+        <div class="team-dot"></div>
       </div>
     </div>
   </section>
